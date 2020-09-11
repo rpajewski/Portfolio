@@ -162,20 +162,85 @@ header nav ul li a:hover {
     grid-auto-flow: dense;
 }
 
-.project-1 {
-    grid-column: span 2;
-    grid-row: span 2;
-    background-image: url(../images/run-buddy.png);
+.project {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-img {
     background-size: cover;
     background-position: center;
+    width: 100%;
+    height: 100%;
     border: 4px solid var(--quaternary-color);
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    position: relative;
+    overflow: auto;
+}
+
+.project-img::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.project:hover .project-img::before {
+    opacity: 0;
+}
+
+.project-banner {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    z-index: 98;
+}
+
+.project-banner div {
+    background-color: var(--background);
+    border-bottom: 3px solid var(--secondary-color);
+    margin: auto 0 10px 0;
+    padding-right: 10px;
+} 
+
+.main-banner {
+    margin: auto 0 30px 0;
+}
+
+.project-banner div h4, .project-banner div h5, .project-banner div h2, .project-banner div h3 {
+    padding-left: 5px;
+}
+
+.hero-project {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.project-1 {
+    background-image: url(../images/run-buddy.png);
 }
 
 .project-2 {
     background-image: url(../images/urban-octo-project.png);
-    background-size: cover;
-    background-position: center;
-    border: 4px solid var(--quaternary-color);
+}
+
+.project-3 {
+    background-image: url(../images/gitlab.png);
+}
+
+.project-4 {
+    background-image: url(../images/mdn.png);
+}
+
+.project-5 {
+    background-image: url(../images/colorhunt.png);
 }
 
 /* Start Styles for Contact Me */
@@ -191,7 +256,7 @@ header nav ul li a:hover {
 
 .contact-title {
     border-right: 3px solid var(--secondary-color);
-    padding-right: 50px;
+    width: 34%;
 }
 
 .contact-info {
@@ -226,3 +291,4 @@ header nav ul li a:hover {
     text-decoration: underline var(--secondary-color);
     border-bottom: none;
   }
+
