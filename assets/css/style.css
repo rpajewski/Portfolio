@@ -129,6 +129,7 @@ header nav ul li a:hover {
 .bio-text {
     color: var(--primary-color);
     font-size: 14px;
+    font-weight: 500px;
     width: 66%;
     padding-left: 50px;
     border-left: 3px solid var(--secondary-color);
@@ -364,4 +365,7 @@ header nav ul li a:hover {
     .hero-statement {
         margin: auto;
     }
+
+    .contact-info ul li a {
+        font-size: 2vw;
   }
