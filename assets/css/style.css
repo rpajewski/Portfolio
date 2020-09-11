@@ -22,7 +22,7 @@ body {
 .section-title {
     font-size: 32px;
     color: var(--primary-color);
-    padding-right: 20px;
+    padding-right: 25px;
     text-align: right;
     margin: 0 auto;
     width: 34%;
@@ -254,17 +254,13 @@ header nav ul li a:hover {
     justify-content: space-between;
 }
 
-.contact-title {
-    border-right: 3px solid var(--secondary-color);
-    width: 34%;
-}
-
 .contact-info {
     color: var(--primary-color);
     font-size: 14px;
     width: 66%;
-    padding-left: 50px;
+    padding: 25px 0 25px 50px;
     margin: 7px 0;
+    border-left: 3px solid var(--secondary-color);
 }
 
 .contact-info ul {
@@ -290,5 +286,108 @@ header nav ul li a:hover {
 .contact-info ul li a:hover {
     text-decoration: underline var(--secondary-color);
     border-bottom: none;
-  }
+}
 
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-banner {
+        position: relative;
+        justify-content: center;
+        top: 40px;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    .section-title {
+        flex: 1 25%;
+        font-size: 22px;
+    }
+
+    .bio-text, .project-grid-wrapper, .contact-info {
+        flex: 8 75;
+    }
+
+    .contact-info {
+        position: relative;
+        justify-content: center;
+    }
+  }
+  
+  /* MEDIA QUERY FOR TABLETS AND SMALLER */
+  @media screen and (max-width: 768px) {
+    .hero {
+        min-height: 100px;
+    }
+
+    .bio, .projects, .contact {
+        margin: 20px auto;
+        padding-bottom: auto;
+    }
+
+    .step h3 {
+        flex: 1 100%;
+        text-align: center;
+    }
+
+    .step-info {
+        flex: 2 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .step-img {
+        flex: 0 32%;
+        margin-right: 15px 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .step-text {
+        flex: 100%;
+    }
+
+    .trainer-img::after {
+        display: none;
+    }
+
+    .trainer-img h3, .trainer-img h4 {
+        display: none;
+    }
+
+    .trainer-bio h3, .trainer-bio h4 {
+        display: block;
+    }
+  }
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+    .section-title {
+        flex: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .bio-text, .project-grid-wrapper, .contact-info {
+        border-left: none;
+        border-top: 3px solid var(--secondary-color);
+        padding: 25px 0 0 0;
+    }
+  }
