@@ -8,3 +8,6 @@ I learned how to use the grid auto-fit feature in this project as well as got a 
 
 ## Deployment Link:
 https://rpajewski.github.io/Portfolio/
+
+## Screenshot:
+![Screen Shot 2020-09-11 at 4 04 44 PM](https://user-images.githubusercontent.com/70237837/92972829-8d14e180-f448-11ea-85f2-71f7962d80a0.png)
